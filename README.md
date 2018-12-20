@@ -32,8 +32,6 @@ Download all the files. Run mongod. Run the app.js file throught node. The serve
 
 * **Sahil Bondre** - *Initial work* - [godcrampy](https://github.com/godcrampy)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
