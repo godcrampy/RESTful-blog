@@ -1,0 +1,49 @@
+<% include partials/header %>
+
+
+
+
+<div class="ui grid " style="margin-top: 2em;">
+        <div class="four wide column"></div>
+        <div class="eight wide column ">
+                
+                        <div class="ui huge header"><%= blog.title %></div>
+                        <div class="eight wide column ui basic label">
+                                <%= blog.created.toDateString() %>
+                        </div>
+                 
+        </div>
+        <div class="four wide column"></div>
+
+        <div class="four wide column"></div>
+
+        <div class="eight wide column">
+                <img src="<%= blog.image %>" class="ui fluid centered image rounded">
+        </div>
+        <div class="four wide column"></div>
+
+        <div class="four wide column"></div>
+        <div class="eight wide column">
+            <p class="ui large" style="font-size: 16px;">
+                    <%- blog.body %>
+            </p>
+                
+        </div>
+        <div class="four wide column"></div>
+
+        <div class="four wide column"></div>
+        <div class="eight wide column">
+            <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST" class="ui form" style="display:inline; margin:0px; padding:0px;">
+                <button class="ui  basic negative  button" tabindex="0">
+                        Delete
+                        </button>
+                        
+            </form>
+            <button class="ui basic  positive  button" tabindex="0" onclick="window.location.href='/blogs/<%= blog._id %>/edit'">
+                    Edit
+
+        </div>
+        <div class="four wide column"></div>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,42 @@
+<% include partials/header %>
+<div class="ui grid" style="margin-top : 50px;">
+        <div class="four wide column"></div>
+        <div class="eight wide column">
+                <h1>Blogs</h1>
+                <div class="ui divider"></div>
+        </div>
+        <div class="four wide column"></div>
+</div>
+<div style=" margin-left: 25%; margin-right: 25%;">
+        <% blogs.forEach(function(blog){ %>
+
+
+
+
+
+        <div class="ui link cards">
+                <div class="card" onclick="window.location.href='/blogs/<%= blog._id %>'">
+                        <div class="image">
+                                <img src="<%= blog.image %>" class="ui image fluid">
+                        </div>
+                        <div class="content">
+                                <div class="header">
+                                        <%= blog.title %>
+                                </div>
+                                <div class="meta">
+                                        <%= blog.created.toDateString() %>
+                                </div>
+                                <div class="description">
+                                        <%- blog.body.substring(0,100) %>...
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <% }) %>
+</div>
+
+
+
+
+
+<% include partials/footer %>
